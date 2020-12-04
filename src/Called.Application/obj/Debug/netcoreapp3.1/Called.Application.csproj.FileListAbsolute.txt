@@ -1,0 +1,24 @@
+D:\Visual Studio\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Application.deps.json
+D:\Visual Studio\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Application.dll
+D:\Visual Studio\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Application.pdb
+D:\Visual Studio\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Domain.dll
+D:\Visual Studio\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Domain.pdb
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.csproj.CopyComplete
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.dll
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.pdb
+D:\Visual Studio\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.csproj.CoreCompileInputs.cache
+D:\Desktop\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Application.deps.json
+D:\Desktop\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Application.dll
+D:\Desktop\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Application.pdb
+D:\Desktop\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Domain.dll
+D:\Desktop\Called\src\Called.Application\bin\Debug\netcoreapp3.1\Called.Domain.pdb
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.csprojAssemblyReference.cache
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.AssemblyInfoInputs.cache
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.AssemblyInfo.cs
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.csproj.CoreCompileInputs.cache
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.csproj.CopyComplete
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.dll
+D:\Desktop\Called\src\Called.Application\obj\Debug\netcoreapp3.1\Called.Application.pdb
