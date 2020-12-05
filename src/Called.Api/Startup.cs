@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Called.Application.AutoMapper;
 using Called.Infrastructure.Context;
+using Called.Infrastructure.EventBus.Options;
 using Called.Infrastructure.IoC;
 using Called.Microservice.Hubs;
 using FluentValidation.AspNetCore;
@@ -32,12 +33,18 @@ namespace Called.Api
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        {
+        {           
             // Context
 
             services.AddDbContext<CalledContext>(option =>
                  option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
+
+            // RabbitMQ
+
+            services.AddOptions();
+
+            services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMq"));
 
             // IoC
 
@@ -47,11 +54,9 @@ namespace Called.Api
 
             services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));
 
-            // AppSettings
+            // JWT
 
             var audienceConfig = Configuration.GetSection("Audience");
-
-            // JWT
 
             services.AddAuthentication(x =>
             {

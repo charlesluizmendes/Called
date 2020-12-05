@@ -9,7 +9,6 @@ using Called.Domain.Entities;
 using Called.Application.Services.Command;
 using Called.Domain.Interfaces.Repository;
 using Called.Domain.Interfaces.Services;
-using Called.Infrastructure.Services.Services;
 using Called.Infrastructure.Repository;
 using Called.Domain.Services;
 using Called.Infrastructure.EventBus.Sender;
@@ -38,8 +37,6 @@ namespace Called.Infrastructure.IoC
             container.AddTransient<ITicketRepository, TicketRepository>();
 
             container.AddTransient<ITicketCreateSender, TicketCreateSender>();
-
-            container.AddTransient<IEmailService, EmailService>();
         }
     }
 }

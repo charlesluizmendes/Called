@@ -30,9 +30,9 @@ namespace Called.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateHour")
-                        .ValueGeneratedOnAddOrUpdate()
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasComputedColumnSql("GETDATE()");
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("Email")
                         .IsRequired()

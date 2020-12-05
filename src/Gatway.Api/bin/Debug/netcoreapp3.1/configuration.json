@@ -13,7 +13,7 @@
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/ticket",
+      "DownstreamPathTemplate": "/api/called",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -21,8 +21,8 @@
           "Port": 44336
         }
       ],
-      "UpstreamPathTemplate": "/api/ticket",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "UpstreamPathTemplate": "/api/called",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Token",
         "AllowedScopes": []

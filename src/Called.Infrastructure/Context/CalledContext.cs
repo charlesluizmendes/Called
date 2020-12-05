@@ -23,8 +23,7 @@ namespace Called.Infrastructure.Context
             builder.Entity<Ticket>(e =>
             {
                 e.ToTable("Ticket");
-                e.Property(p => p.DateHour).ValueGeneratedOnAddOrUpdate().HasComputedColumnSql("GETDATE()");
-                e.Property(p => p.DateHour).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+                e.Property(p => p.DateHour).HasDefaultValueSql("GETDATE()");
             });
         }
     }

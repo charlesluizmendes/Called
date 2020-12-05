@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Attendance.Api.Hubs;
+using Attemdance.Infrastructure.Context;
+using Attemdance.Infrastructure.EventBus.Options;
+using Attemdance.Infrastructure.IoC;
+using Attemdance.Infrastructure.Service.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Attemdance.Api
 {
@@ -25,49 +28,39 @@ namespace Attemdance.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            // AppSettings
+        {           
+            // Context
 
-            var audienceConfig = Configuration.GetSection("Audience");
+            services.AddDbContext<AttemdanceContext>(option =>
+                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+            );
 
-            // JWT
+            // RabbitMQ
 
-            services.AddAuthentication(x =>
+            services.AddOptions();
+
+            services.Configure<RabbitMqConfiguration>(Configuration.GetSection("RabbitMq"));
+
+            // Email
+
+            services.Configure<EmailConfiguration>(Configuration.GetSection("Email"));
+
+            // IoC
+
+            InjectorDependency.Register(services);
+
+            // Swagger
+
+            services.AddSwaggerGen(c =>
             {
-                x.DefaultAuthenticateScheme = "Token";
-            })
-            .AddJwtBearer("Token", options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(audienceConfig["Secret"])),
-                    ValidateIssuer = true,
-                    ValidIssuer = audienceConfig["Iss"],
-                    ValidateAudience = true,
-                    ValidAudience = audienceConfig["Aud"],
-                    ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero,
-                    RequireExpirationTime = true
-                };
+                    Title = "Microservice Attemdance",
+                    Description = "Microservice of Attemdance",
+                    Version = "v1"
+                });
             });
-
-            // Cors
-
-            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
-            {
-                builder
-                    .WithOrigins("https://localhost:12345")
-                    .AllowAnyHeader()
-                    .WithMethods("GET", "POST")
-                    .AllowCredentials();
-            }));
-
-            // WebSocket
-
-            services.AddSignalR();
 
             services.AddControllers();
         }
@@ -82,25 +75,22 @@ namespace Attemdance.Api
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
+            // Swagger
 
-            // JWT
+            app.UseSwagger();
 
-            app.UseAuthentication();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Microservice Called");
+            });
 
-            app.UseAuthorization();
+            app.UseRouting();            
 
-            // Cors
-
-            app.UseCors("CorsPolicy");
+            app.UseAuthorization();            
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
-
-                // WebSocket
-
-                endpoints.MapHub<ChatHub>("/chathub");
+                endpoints.MapControllers();               
             });
         }
     }

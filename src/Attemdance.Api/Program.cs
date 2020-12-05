@@ -21,6 +21,14 @@ namespace Attemdance.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                })
+                .ConfigureAppConfiguration((hostingcontext, config) =>
+                {
+                    config.AddJsonFile("appsettings.json", false, true)
+                        .AddJsonFile($"appsettings.{hostingcontext.HostingEnvironment.EnvironmentName}.json", true, true);
+                })
+                .UseDefaultServiceProvider(options =>
+                    options.ValidateScopes = false
+                );
     }
 }

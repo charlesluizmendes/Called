@@ -1,0 +1,9 @@
+D:\Visual Studio\Called\src\Attemdance.Domain\bin\Debug\netcoreapp3.1\Attemdance.Domain.deps.json
+D:\Visual Studio\Called\src\Attemdance.Domain\bin\Debug\netcoreapp3.1\Attemdance.Domain.dll
+D:\Visual Studio\Called\src\Attemdance.Domain\bin\Debug\netcoreapp3.1\Attemdance.Domain.pdb
+D:\Visual Studio\Called\src\Attemdance.Domain\obj\Debug\netcoreapp3.1\Attemdance.Domain.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Attemdance.Domain\obj\Debug\netcoreapp3.1\Attemdance.Domain.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Attemdance.Domain\obj\Debug\netcoreapp3.1\Attemdance.Domain.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Attemdance.Domain\obj\Debug\netcoreapp3.1\Attemdance.Domain.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Called\src\Attemdance.Domain\obj\Debug\netcoreapp3.1\Attemdance.Domain.dll
+D:\Visual Studio\Called\src\Attemdance.Domain\obj\Debug\netcoreapp3.1\Attemdance.Domain.pdb
