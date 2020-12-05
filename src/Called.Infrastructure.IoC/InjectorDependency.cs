@@ -12,6 +12,8 @@ using Called.Domain.Interfaces.Services;
 using Called.Infrastructure.Repository;
 using Called.Domain.Services;
 using Called.Infrastructure.EventBus.Sender;
+using Called.Domain.Interfaces.Sender.EventBus;
+using Called.Infrastructure.Services.Hubs;
 
 namespace Called.Infrastructure.IoC
 {
@@ -37,6 +39,8 @@ namespace Called.Infrastructure.IoC
             container.AddTransient<ITicketRepository, TicketRepository>();
 
             container.AddTransient<ITicketCreateSender, TicketCreateSender>();
+
+            container.AddTransient<IChatHubService, ChatHubService>();
         }
     }
 }

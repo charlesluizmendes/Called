@@ -1,4 +1,5 @@
 ﻿using Called.Domain.Entities;
+using Called.Domain.Interfaces.Sender.EventBus;
 using Called.Infrastructure.EventBus.Options;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;

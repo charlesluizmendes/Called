@@ -9,7 +9,7 @@ namespace Called.Infrastructure.Services.Hubs
 {
     public class ChatHubService : Hub, IChatHubService
     {
-        public async Task SendMessage(string usuario, string mensagem)
+        public async Task SendMessageAsync(string usuario, string mensagem)
         {
             await Clients.All.SendAsync("ReceiveMessage", usuario, mensagem);
         }

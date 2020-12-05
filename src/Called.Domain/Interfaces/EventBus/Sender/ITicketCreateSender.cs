@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Called.Infrastructure.EventBus.Sender
+namespace Called.Domain.Interfaces.Sender.EventBus
 {
     public interface ITicketCreateSender
     {
