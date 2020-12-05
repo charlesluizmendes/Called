@@ -8,7 +8,7 @@ using Called.Application.AutoMapper;
 using Called.Infrastructure.Context;
 using Called.Infrastructure.EventBus.Options;
 using Called.Infrastructure.IoC;
-using Called.Microservice.Hubs;
+using Called.Infrastructure.Services.Hubs;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -146,7 +146,7 @@ namespace Called.Api
 
                 // WebSocket
 
-                endpoints.MapHub<ChatHub>("/chathub");
+                endpoints.MapHub<ChatHubService>("/chathub");
             });
         }
     }

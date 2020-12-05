@@ -14,10 +14,6 @@ D:\Desktop\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.I
 D:\Desktop\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.csproj.CopyComplete
 D:\Desktop\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.dll
 D:\Desktop\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.pdb
-D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.csprojAssemblyReference.cache
-D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.AssemblyInfoInputs.cache
-D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.AssemblyInfo.cs
-D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.csproj.CoreCompileInputs.cache
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Called.Infrastructure.IoC.deps.json
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Called.Infrastructure.IoC.dll
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Called.Infrastructure.IoC.pdb
@@ -27,6 +23,10 @@ D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Ca
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Called.Application.pdb
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Called.Domain.pdb
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Called.Infrastructure.pdb
+D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.csproj.CoreCompileInputs.cache
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.csproj.CopyComplete
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.dll
 D:\Visual Studio\Called\src\Called.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Called.Infrastructure.IoC.pdb

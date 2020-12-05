@@ -1,6 +1,7 @@
 D:\Visual Studio\Called\src\Called.Domain\bin\Debug\netcoreapp3.1\Called.Domain.deps.json
 D:\Visual Studio\Called\src\Called.Domain\bin\Debug\netcoreapp3.1\Called.Domain.dll
 D:\Visual Studio\Called\src\Called.Domain\bin\Debug\netcoreapp3.1\Called.Domain.pdb
+D:\Visual Studio\Called\src\Called.Domain\obj\Debug\netcoreapp3.1\Called.Domain.csprojAssemblyReference.cache
 D:\Visual Studio\Called\src\Called.Domain\obj\Debug\netcoreapp3.1\Called.Domain.AssemblyInfoInputs.cache
 D:\Visual Studio\Called\src\Called.Domain\obj\Debug\netcoreapp3.1\Called.Domain.AssemblyInfo.cs
 D:\Visual Studio\Called\src\Called.Domain\obj\Debug\netcoreapp3.1\Called.Domain.csproj.CoreCompileInputs.cache

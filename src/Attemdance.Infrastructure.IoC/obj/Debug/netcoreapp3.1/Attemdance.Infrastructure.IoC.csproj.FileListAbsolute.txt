@@ -1,13 +1,13 @@
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.deps.json
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.dll
-D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.AssemblyInfoInputs.cache
-D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.AssemblyInfo.cs
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.pdb
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Domain.dll
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Infrastructure.dll
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Domain.pdb
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\bin\Debug\netcoreapp3.1\Attemdance.Infrastructure.pdb
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.AssemblyInfo.cs
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.csproj.CoreCompileInputs.cache
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.csproj.CopyComplete
 D:\Visual Studio\Called\src\Attemdance.Infrastructure.IoC\obj\Debug\netcoreapp3.1\Attemdance.Infrastructure.IoC.dll

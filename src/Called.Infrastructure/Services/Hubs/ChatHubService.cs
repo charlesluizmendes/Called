@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Called.Domain.Interfaces.Services;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Called.Microservice.Hubs
+namespace Called.Infrastructure.Services.Hubs
 {
-    public class ChatHub : Hub
+    public class ChatHubService : Hub, IChatHubService
     {
         public async Task SendMessage(string usuario, string mensagem)
         {

@@ -20,6 +20,7 @@ D:\Visual Studio\Called\src\Called.Infrastructure\bin\Debug\netcoreapp3.1\Called
 D:\Visual Studio\Called\src\Called.Infrastructure\bin\Debug\netcoreapp3.1\Called.Infrastructure.pdb
 D:\Visual Studio\Called\src\Called.Infrastructure\bin\Debug\netcoreapp3.1\Called.Domain.dll
 D:\Visual Studio\Called\src\Called.Infrastructure\bin\Debug\netcoreapp3.1\Called.Domain.pdb
+D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.csprojAssemblyReference.cache
 D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.AssemblyInfoInputs.cache
 D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.AssemblyInfo.cs
 D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.csproj.CoreCompileInputs.cache
@@ -27,4 +28,3 @@ D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called
 D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.dll
 D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.pdb
 D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.genruntimeconfig.cache
-D:\Visual Studio\Called\src\Called.Infrastructure\obj\Debug\netcoreapp3.1\Called.Infrastructure.csprojAssemblyReference.cache

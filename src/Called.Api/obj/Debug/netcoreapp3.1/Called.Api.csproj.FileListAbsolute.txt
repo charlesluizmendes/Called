@@ -86,11 +86,6 @@ D:\Desktop\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.MvcApplicati
 D:\Desktop\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.dll
 D:\Desktop\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.pdb
 D:\Desktop\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.genruntimeconfig.cache
-D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.csprojAssemblyReference.cache
-D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.AssemblyInfoInputs.cache
-D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.AssemblyInfo.cs
-D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.csproj.CoreCompileInputs.cache
-D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -147,6 +142,7 @@ D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Collection
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
@@ -166,6 +162,12 @@ D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\Called.Infrastruc
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\Called.Application.pdb
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\Called.Domain.pdb
 D:\Visual Studio\Called\src\Called.Api\bin\Debug\netcoreapp3.1\Called.Infrastructure.pdb
+D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.RazorTargetAssemblyInfo.cache
 D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\Called.Api.csproj.CopyComplete
 D:\Visual Studio\Called\src\Called.Api\obj\Debug\netcoreapp3.1\staticwebassets\Called.Api.StaticWebAssets.Manifest.cache
