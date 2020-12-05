@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Attemdance.Infrastructure.EventBus.Receiver
 {
-    public class AttemdanceCreateReceiver : BackgroundService
+    public class TicketCreateReceiver : BackgroundService
     {
         private readonly ITicketService _ticketService;
 
@@ -26,7 +26,7 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
         private IModel _channel;
         private IConnection _connection;
 
-        public AttemdanceCreateReceiver(ITicketService ticketService, IOptions<RabbitMqConfiguration> rabbitMqOptions)
+        public TicketCreateReceiver(ITicketService ticketService, IOptions<RabbitMqConfiguration> rabbitMqOptions)
         {
             _ticketService = ticketService;
 

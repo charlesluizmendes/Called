@@ -25,7 +25,7 @@ namespace Attemdance.Infrastructure.IoC
             container.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             container.AddTransient<ITicketRepository, TicketRepository>();
 
-            container.AddHostedService<AttemdanceCreateReceiver>();
+            container.AddHostedService<TicketCreateReceiver>();
 
             container.AddTransient<IEmailService, EmailService>();
         }

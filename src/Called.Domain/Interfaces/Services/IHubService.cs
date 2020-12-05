@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Called.Domain.Interfaces.Services
 {
-    public interface IChatHubService
+    public interface IHubService
     {
         Task SendMessageAsync(string usuario, string mensagem);
     }

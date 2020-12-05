@@ -30,7 +30,7 @@ namespace Attemdance.Domain.Services
                 await _emailService.SendAsync(
                     "noreplay@ticket.com",
                     ticket.Email,
-                    "Attemdance",
+                    "Called System",
                     ticket.Complaint
                     );
             }

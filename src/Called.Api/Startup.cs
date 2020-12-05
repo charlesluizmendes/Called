@@ -8,12 +8,12 @@ using Called.Application.AutoMapper;
 using Called.Infrastructure.Context;
 using Called.Infrastructure.EventBus.Options;
 using Called.Infrastructure.IoC;
-using Called.Infrastructure.Services.Hubs;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -146,7 +146,7 @@ namespace Called.Api
 
                 // WebSocket
 
-                endpoints.MapHub<ChatHubService>("/chathub");
+                endpoints.MapHub<Hub>("/chathub");
             });
         }
     }

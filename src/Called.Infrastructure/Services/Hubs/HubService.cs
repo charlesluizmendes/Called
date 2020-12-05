@@ -7,11 +7,18 @@ using System.Threading.Tasks;
 
 namespace Called.Infrastructure.Services.Hubs
 {
-    public class ChatHubService : Hub, IChatHubService
+    public class HubService : IHubService
     {
+        private readonly IHubContext<Hub> _hub;
+
+        public HubService(IHubContext<Hub> hub)
+        {
+            _hub = hub;
+        }
+
         public async Task SendMessageAsync(string usuario, string mensagem)
         {
-            await Clients.All.SendAsync("ReceiveMessage", usuario, mensagem);
+            await _hub.Clients.All.SendAsync("ReceiveMessage", usuario, mensagem);
         }
     }
 }

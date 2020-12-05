@@ -13,11 +13,11 @@ namespace Called.Domain.Services
     {
         private readonly ITicketRepository _ticketRepository;
         private readonly ITicketCreateSender _ticketCreateSender;
-        private readonly IChatHubService _chatHubService;
+        private readonly IHubService _chatHubService;
 
         public TicketService(ITicketRepository ticketRepository,
             ITicketCreateSender ticketCreateSender,
-            IChatHubService chatHubService)
+            IHubService chatHubService)
             : base(ticketRepository)
         {
             _chatHubService = chatHubService;
