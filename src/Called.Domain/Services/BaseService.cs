@@ -29,16 +29,7 @@ namespace Called.Domain.Services
         public virtual async Task<T> InsertAsync(T entidade)
         {
             return await _repository.InsertAsync(entidade);
-        }
-
-        public virtual async Task<T> UpdateAsync(T entidade)
-        {
-            return await _repository.UpdateAsync(entidade);
-        }
-        public virtual async Task<T> DeleteAsync(T entidade)
-        {
-            return await _repository.DeleteAsync(entidade);
-        }
+        }       
 
         public void Dispose()
         {

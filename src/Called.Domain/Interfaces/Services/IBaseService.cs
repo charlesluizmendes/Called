@@ -11,11 +11,7 @@ namespace Called.Domain.Interfaces.Services
 
         Task<T> GetByIdAsync(object id);
 
-        Task<T> InsertAsync(T entity);
-
-        Task<T> UpdateAsync(T entity);
-
-        Task<T> DeleteAsync(T entity);
+        Task<T> InsertAsync(T entity);       
 
         void Dispose();
     }

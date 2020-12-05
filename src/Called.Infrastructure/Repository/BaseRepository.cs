@@ -54,37 +54,7 @@ namespace Called.Infrastructure.Repository
             {
                 throw ex;
             }
-        }
-
-        public virtual async Task<T> UpdateAsync(T entity)
-        {
-            try
-            {
-                _context.Update(entity);
-                await _context.SaveChangesAsync();
-
-                return entity;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public virtual async Task<T> DeleteAsync(T entity)
-        {
-            try
-            {
-                _context.Set<T>().Remove(entity);
-                await _context.SaveChangesAsync();
-
-                return entity;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        }        
 
         #region Dispose
 

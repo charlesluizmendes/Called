@@ -61,33 +61,6 @@ namespace Called.Api.Controllers
             });
 
             return Ok(_mapper.Map<TicketDto>(ticket));
-        }
-
-        [HttpPut]
-        public async Task<ActionResult<TicketDto>> Put(UpdateTicketDto updateTicketDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(updateTicketDto);
-            }
-
-            var ticket = await _mediator.Send(new UpdateTicketCommand
-            {
-                Ticket = _mapper.Map<Ticket>(updateTicketDto)
-            });
-
-            return Ok(_mapper.Map<TicketDto>(ticket));
-        }
-
-        [HttpDelete]
-        public async Task<ActionResult<TicketDto>> Delete(DeleteTicketDto deleteTicketDto)
-        {           
-            var ticket = await _mediator.Send(new DeleteTicketCommand
-            {
-                Ticket = _mapper.Map<Ticket>(deleteTicketDto)
-            });
-
-            return Ok(_mapper.Map<TicketDto>(ticket));
-        }
+        }        
     }
 }

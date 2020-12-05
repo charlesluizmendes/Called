@@ -27,3 +27,32 @@ D:\Desktop\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.cspr
 D:\Desktop\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.dll
 D:\Desktop\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.pdb
 D:\Desktop\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.genruntimeconfig.cache
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Attemdance.Api.exe
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Attemdance.Api.deps.json
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Attemdance.Api.runtimeconfig.json
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Attemdance.Api.runtimeconfig.dev.json
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Attemdance.Api.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Attemdance.Api.pdb
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Visual Studio\Called\src\Attemdance.Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.RazorTargetAssemblyInfo.cache
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.csproj.CopyComplete
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\staticwebassets\Attemdance.Api.StaticWebAssets.Manifest.cache
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\staticwebassets\Attemdance.Api.StaticWebAssets.xml
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.dll
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.pdb
+D:\Visual Studio\Called\src\Attemdance.Api\obj\Debug\netcoreapp3.1\Attemdance.Api.genruntimeconfig.cache

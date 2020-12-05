@@ -13,10 +13,6 @@ namespace Called.Domain.Interfaces.Repository
 
         Task<T> InsertAsync(T entity);
 
-        Task<T> UpdateAsync(T entity);
-
-        Task<T> DeleteAsync(T entity);
-
         void Dispose();
     }
 }

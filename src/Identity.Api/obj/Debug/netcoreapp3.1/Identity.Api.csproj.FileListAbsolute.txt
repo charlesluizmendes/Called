@@ -23,3 +23,28 @@ D:\Desktop\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcAppli
 D:\Desktop\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.dll
 D:\Desktop\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.pdb
 D:\Desktop\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.genruntimeconfig.cache
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Api.exe
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Api.deps.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Api.runtimeconfig.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Api.runtimeconfig.dev.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Api.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Api.pdb
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.RazorTargetAssemblyInfo.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csproj.CopyComplete
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\staticwebassets\Identity.Api.StaticWebAssets.Manifest.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\staticwebassets\Identity.Api.StaticWebAssets.xml
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.dll
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.pdb
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.genruntimeconfig.cache

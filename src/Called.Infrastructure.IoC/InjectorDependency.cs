@@ -25,20 +25,20 @@ namespace Called.Infrastructure.IoC
             container.AddMediatR(Assembly.GetExecutingAssembly());
             container.AddTransient<IRequestHandler<GetTicketQuery, IEnumerable<Ticket>>, GetTicketQueryHandler>();
             container.AddTransient<IRequestHandler<GetTicketByIdQuery, Ticket>, GetTicketByIdQueryHandler>();
-            container.AddTransient<IRequestHandler<CreateTicketCommand, Ticket>, CreateTicketCommandHandler>();
-            container.AddTransient<IRequestHandler<UpdateTicketCommand, Ticket>, UpdateTicketCommandHandler>();
-            container.AddTransient<IRequestHandler<DeleteTicketCommand, Ticket>, DeleteTicketCommandHandler>();
+            container.AddTransient<IRequestHandler<CreateTicketCommand, Ticket>, CreateTicketCommandHandler>();           
 
             // Domain
 
             container.AddTransient(typeof(IBaseService<>), typeof(BaseService<>));
             container.AddTransient<ITicketService, TicketService>();
 
-            // Infrastructure
+            // Infrastructure            
 
-            container.AddTransient<ITicketCreateSender, TicketCreateSender>();
             container.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             container.AddTransient<ITicketRepository, TicketRepository>();
+
+            container.AddTransient<ITicketCreateSender, TicketCreateSender>();
+
             container.AddTransient<IEmailService, EmailService>();
         }
     }
