@@ -1,0 +1,9 @@
+D:\Visual Studio\Called\src\Identity.Domain\bin\Debug\netcoreapp3.1\Identity.Domain.deps.json
+D:\Visual Studio\Called\src\Identity.Domain\bin\Debug\netcoreapp3.1\Identity.Domain.dll
+D:\Visual Studio\Called\src\Identity.Domain\obj\Debug\netcoreapp3.1\Identity.Domain.AssemblyInfoInputs.cache
+D:\Visual Studio\Called\src\Identity.Domain\obj\Debug\netcoreapp3.1\Identity.Domain.AssemblyInfo.cs
+D:\Visual Studio\Called\src\Identity.Domain\bin\Debug\netcoreapp3.1\Identity.Domain.pdb
+D:\Visual Studio\Called\src\Identity.Domain\obj\Debug\netcoreapp3.1\Identity.Domain.csprojAssemblyReference.cache
+D:\Visual Studio\Called\src\Identity.Domain\obj\Debug\netcoreapp3.1\Identity.Domain.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Called\src\Identity.Domain\obj\Debug\netcoreapp3.1\Identity.Domain.dll
+D:\Visual Studio\Called\src\Identity.Domain\obj\Debug\netcoreapp3.1\Identity.Domain.pdb

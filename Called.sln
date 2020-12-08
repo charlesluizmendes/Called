@@ -35,13 +35,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attemdance.Api", "src\Attem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Api", "src\Identity.Api\Identity.Api.csproj", "{C9A76FE9-31E9-4110-8A7E-317C95F43282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attemdance.Domain", "src\Attemdance.Domain\Attemdance.Domain.csproj", "{2014AC9D-304F-41D0-9F6D-BE4D979FE1CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attemdance.Domain", "src\Attemdance.Domain\Attemdance.Domain.csproj", "{2014AC9D-304F-41D0-9F6D-BE4D979FE1CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attemdance.Infrastructure", "src\Attemdance.Infrastructure\Attemdance.Infrastructure.csproj", "{3EC92577-0191-4D40-A089-C994DE0BE5F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attemdance.Infrastructure", "src\Attemdance.Infrastructure\Attemdance.Infrastructure.csproj", "{3EC92577-0191-4D40-A089-C994DE0BE5F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attemdance.Infrastructure.IoC", "src\Attemdance.Infrastructure.IoC\Attemdance.Infrastructure.IoC.csproj", "{266CDC45-C4BC-4006-A0C5-9400FD7B15D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attemdance.Infrastructure.IoC", "src\Attemdance.Infrastructure.IoC\Attemdance.Infrastructure.IoC.csproj", "{266CDC45-C4BC-4006-A0C5-9400FD7B15D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gatway", "Gatway", "{729465D2-A5F9-4D19-B4B9-3EED900FBF58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\Identity.Domain\Identity.Domain.csproj", "{71A907FC-F869-4B3A-A2A4-B350712597F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "src\Identity.Infrastructure\Identity.Infrastructure.csproj", "{1CA985F4-8512-49F1-A89F-58F6A4199497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure.IoC", "src\Identity.Infrastructure.IoC\Identity.Infrastructure.IoC.csproj", "{5DA32371-D6A9-4AD0-A919-AC07CAD98890}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +99,18 @@ Global
 		{266CDC45-C4BC-4006-A0C5-9400FD7B15D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{266CDC45-C4BC-4006-A0C5-9400FD7B15D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{266CDC45-C4BC-4006-A0C5-9400FD7B15D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A907FC-F869-4B3A-A2A4-B350712597F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A907FC-F869-4B3A-A2A4-B350712597F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A907FC-F869-4B3A-A2A4-B350712597F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A907FC-F869-4B3A-A2A4-B350712597F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA985F4-8512-49F1-A89F-58F6A4199497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA985F4-8512-49F1-A89F-58F6A4199497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA985F4-8512-49F1-A89F-58F6A4199497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA985F4-8512-49F1-A89F-58F6A4199497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA32371-D6A9-4AD0-A919-AC07CAD98890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA32371-D6A9-4AD0-A919-AC07CAD98890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA32371-D6A9-4AD0-A919-AC07CAD98890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA32371-D6A9-4AD0-A919-AC07CAD98890}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +135,9 @@ Global
 		{3EC92577-0191-4D40-A089-C994DE0BE5F2} = {276EB95A-0FA1-4D0B-AF53-0610D71BE231}
 		{266CDC45-C4BC-4006-A0C5-9400FD7B15D2} = {276EB95A-0FA1-4D0B-AF53-0610D71BE231}
 		{729465D2-A5F9-4D19-B4B9-3EED900FBF58} = {1AB91D90-6253-4094-AC68-398C43B09A00}
+		{71A907FC-F869-4B3A-A2A4-B350712597F4} = {CBD20388-09D6-47C6-8BF7-DB5546977E41}
+		{1CA985F4-8512-49F1-A89F-58F6A4199497} = {CBD20388-09D6-47C6-8BF7-DB5546977E41}
+		{5DA32371-D6A9-4AD0-A919-AC07CAD98890} = {CBD20388-09D6-47C6-8BF7-DB5546977E41}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9140E263-C760-42B2-B6C1-1C3A78149568}

@@ -7,6 +7,6 @@ namespace Called.Domain.Interfaces.Sender.EventBus
 {
     public interface ITicketCreateSender
     {
-        void SendTicket(Ticket ticket);
+        void SendMessage(Ticket ticket);
     }
 }

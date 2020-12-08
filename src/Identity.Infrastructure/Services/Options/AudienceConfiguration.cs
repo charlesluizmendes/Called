@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace Identity.Api.Models
+namespace Identity.Infrastructure.Services.Options
 {
-    public class Audience
+    public class AudienceConfiguration
     {
         public string Secret { get; set; }
 

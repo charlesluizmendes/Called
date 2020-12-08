@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Identity.Api.Models;
+using Identity.Infrastructure.Context;
+using Identity.Infrastructure.IoC;
+using Identity.Infrastructure.Services.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,9 +26,21 @@ namespace Identity.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            // Context
 
-            services.Configure<Audience>(Configuration.GetSection("Audience"));
+            services.AddDbContext<IdentityContext>(option =>
+                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+            );
+
+            // IoC
+
+            InjectorDependency.Register(services);
+
+            // JWT
+
+            services.Configure<AudienceConfiguration>(Configuration.GetSection("Audience"));
+
+            services.AddControllers();           
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

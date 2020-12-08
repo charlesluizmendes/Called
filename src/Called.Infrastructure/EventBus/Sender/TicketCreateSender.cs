@@ -25,19 +25,33 @@ namespace Called.Infrastructure.EventBus.Sender
             _password = rabbitMqOptions.Value.Password;
         }
 
-        public void SendTicket(Ticket ticket)
+        public void SendMessage(Ticket ticket)
         {
-            var factory = new ConnectionFactory() { HostName = _hostname, UserName = _username, Password = _password };
+            var factory = new ConnectionFactory() 
+            { 
+                HostName = _hostname, 
+                UserName = _username, 
+                Password = _password 
+            };
 
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+                channel.QueueDeclare(queue: _queueName, 
+                    durable: false, 
+                    exclusive: false, 
+                    autoDelete: false, 
+                    arguments: null
+                    );
 
                 var json = JsonConvert.SerializeObject(ticket);
                 var body = Encoding.UTF8.GetBytes(json);
 
-                channel.BasicPublish(exchange: "", routingKey: _queueName, basicProperties: null, body: body);
+                channel.BasicPublish(exchange: "", 
+                    routingKey: _queueName, 
+                    basicProperties: null, 
+                    body: body
+                    );
             }
         }
     }

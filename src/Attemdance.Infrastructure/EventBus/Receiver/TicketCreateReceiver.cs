@@ -26,7 +26,8 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
         private IModel _channel;
         private IConnection _connection;
 
-        public TicketCreateReceiver(ITicketService ticketService, IOptions<RabbitMqConfiguration> rabbitMqOptions)
+        public TicketCreateReceiver(ITicketService ticketService, 
+            IOptions<RabbitMqConfiguration> rabbitMqOptions)
         {
             _ticketService = ticketService;
 
@@ -49,7 +50,12 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
 
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
-            _channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+            _channel.QueueDeclare(queue: _queueName, 
+                durable: false, 
+                exclusive: false, 
+                autoDelete: false, 
+                arguments: null
+                );
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)

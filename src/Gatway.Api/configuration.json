@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/auth",
+      "DownstreamPathTemplate": "/api/user",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,19 @@
           "Port": 44360
         }
       ],
-      "UpstreamPathTemplate": "/api/auth",
+      "UpstreamPathTemplate": "/api/user",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/token",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44360
+        }
+      ],
+      "UpstreamPathTemplate": "/api/token",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {

@@ -16,7 +16,7 @@ namespace Called.Infrastructure.Services.Hubs
             _hub = hub;
         }
 
-        public async Task SendMessageAsync(string usuario, string mensagem)
+        public async Task SendChatAsync(string usuario, string mensagem)
         {
             await _hub.Clients.All.SendAsync("ReceiveMessage", usuario, mensagem);
         }

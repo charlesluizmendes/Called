@@ -7,6 +7,6 @@ namespace Called.Domain.Interfaces.Services
 {
     public interface IHubService
     {
-        Task SendMessageAsync(string usuario, string mensagem);
+        Task SendChatAsync(string usuario, string mensagem);
     }
 }

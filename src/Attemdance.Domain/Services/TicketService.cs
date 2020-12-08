@@ -21,21 +21,22 @@ namespace Attemdance.Domain.Services
             _emailService = emailService;
         }
 
-        public override async Task<Ticket> InsertAsync(Ticket entity)
+        public override async Task<Ticket> InsertAsync(Ticket ticket)
         {
-            var ticket = await _ticketRepository.InsertAsync(entity);
+            var _ticket = await _ticketRepository.InsertAsync(ticket);
 
-            if (ticket != null)
+            if (_ticket != null)
             {
-                await _emailService.SendAsync(
-                    "noreplay@ticket.com",
+                await _emailService.SendAsync("no-replay@called.com",
                     ticket.Email,
-                    "Called System",
+                    "Called",
                     ticket.Complaint
                     );
+
+                return _ticket;
             }
 
-            return ticket;
+            return null;
         }
     }
 }
