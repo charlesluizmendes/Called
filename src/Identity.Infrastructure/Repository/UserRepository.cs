@@ -21,15 +21,13 @@ namespace Identity.Infrastructure.Repository
             _context = context;
         }
 
-        public async Task<User> GetUserAsync(User user)
+        public async Task<User> GetUserByLoginAsync(User user)
         {
-            var _user = await _context.Users.FirstOrDefaultAsync(x => 
-                x.UserName.Equals(user.UserName));
+            var _user = await _context.Users.FirstOrDefaultAsync(x => x.Email.Equals(user.Email));
 
-            var password = HasherExtension.VerifyHashedPassword(_user.PasswordHash, 
-                user.PasswordHash);
+            var result = HasherExtension.VerifyHashedPassword(_user.PasswordHash, user.PasswordHash);
 
-            if (password)
+            if (result)
             {
                 return _user;
             }

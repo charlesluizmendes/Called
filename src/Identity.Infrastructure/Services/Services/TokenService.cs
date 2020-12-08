@@ -25,7 +25,7 @@ namespace Identity.Infrastructure.Services.Services
             _aud = audienceOptions.Value.Aud;
         }
 
-        public async Task<AcessToken> CreateTokenAsync(User user)
+        public async Task<AcessToken> CreateTokenByEmailAsync(User user)
         {
             var now = DateTime.UtcNow;
 
@@ -36,9 +36,7 @@ namespace Identity.Infrastructure.Services.Services
                 new Claim(JwtRegisteredClaimNames.Iat, now.ToUniversalTime().ToString(), ClaimValueTypes.Integer64)
             };
 
-            var signingKey = new SymmetricSecurityKey(
-                Encoding.ASCII.GetBytes(_secret)
-                );
+            var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_secret));
 
             var tokenValidationParameters = new TokenValidationParameters
             {

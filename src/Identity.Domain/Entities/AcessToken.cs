@@ -7,6 +7,7 @@ namespace Identity.Domain.Entities
     public class AcessToken
     {
         public string Token { get; set; }
+
         public DateTime TokenExpires { get; set; }
     }
 }

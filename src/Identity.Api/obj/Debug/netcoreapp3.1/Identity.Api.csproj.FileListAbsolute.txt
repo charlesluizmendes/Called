@@ -39,8 +39,6 @@ D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\System.Identity
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csprojAssemblyReference.cache
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.AssemblyInfoInputs.cache
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.AssemblyInfo.cs
-D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csproj.CoreCompileInputs.cache
-D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.RazorTargetAssemblyInfo.cache
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csproj.CopyComplete
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\staticwebassets\Identity.Api.StaticWebAssets.Manifest.cache
@@ -94,3 +92,12 @@ D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Infras
 D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Infrastructure.IoC.pdb
 D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Domain.pdb
 D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Infrastructure.pdb
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\libman.json
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcApplicationPartsAssemblyInfo.cache

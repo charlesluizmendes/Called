@@ -8,6 +8,6 @@ namespace Identity.Domain.Interfaces.Services
 {
     public interface IUserService : IBaseService<User>
     {
-        Task<AcessToken> GetTokenAsync(User user);
+        Task<AcessToken> GetTokenByEmailAsync(User user);
     }
 }

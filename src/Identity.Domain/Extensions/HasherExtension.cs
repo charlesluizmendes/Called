@@ -16,14 +16,11 @@ namespace Identity.Domain.Extensions
             return hashPassword;
         }
 
-        public static bool VerifyHashedPassword(string passwordHash, 
-            string providedPassword)
+        public static bool VerifyHashedPassword(string passwordHash, string providedPassword)
         {
             var hasher = new PasswordHasher<User>();
 
-            var verify = hasher.VerifyHashedPassword(null, 
-                passwordHash, 
-                providedPassword);
+            var verify = hasher.VerifyHashedPassword(null, passwordHash, providedPassword);
 
             if (verify == PasswordVerificationResult.Success)
             {

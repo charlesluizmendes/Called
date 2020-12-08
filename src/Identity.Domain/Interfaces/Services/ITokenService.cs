@@ -8,6 +8,6 @@ namespace Identity.Domain.Interfaces.Services
 {
     public interface ITokenService
     {
-        Task<AcessToken> CreateTokenAsync(User user);
+        Task<AcessToken> CreateTokenByEmailAsync(User user);
     }
 }

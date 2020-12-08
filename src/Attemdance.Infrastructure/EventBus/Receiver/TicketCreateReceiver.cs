@@ -48,14 +48,16 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
                 Password = _password
             };
 
-            _connection = factory.CreateConnection();
-            _channel = _connection.CreateModel();
-            _channel.QueueDeclare(queue: _queueName, 
-                durable: false, 
-                exclusive: false, 
-                autoDelete: false, 
-                arguments: null
-                );
+            try
+            {
+                _connection = factory.CreateConnection();
+                _channel = _connection.CreateModel();
+                _channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error When Trying to Start EventBus", ex);                
+            }            
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -63,18 +65,32 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
             var consumer = new EventingBasicConsumer(_channel);
             consumer.Received += (ch, ea) =>
             {
-                var body = ea.Body.ToArray();
-                var message = Encoding.UTF8.GetString(body);
-                var ticket = JsonConvert.DeserializeObject<Ticket>(message);
+                try
+                {
+                    var body = ea.Body.ToArray();
+                    var message = Encoding.UTF8.GetString(body);
+                    var ticket = JsonConvert.DeserializeObject<Ticket>(message);
 
-                _ticketService.InsertAsync(ticket);
+                    HandlerTicketMessageAsync(ticket);
 
-                _channel.BasicAck(ea.DeliveryTag, false);
+                    _channel.BasicAck(ea.DeliveryTag, false);
+                }
+                catch (Exception ex)
+                {
+                    _channel.BasicNack(ea.DeliveryTag, false, true);
+
+                    throw new Exception("Error When Trying to Consume Queue", ex);
+                }                
             };
 
             _channel.BasicConsume(_queueName, false, consumer);
 
             return Task.CompletedTask;
+        }
+
+        private async void HandlerTicketMessageAsync(Ticket ticket)
+        {
+            await _ticketService.InsertAsync(ticket);
         }
 
         public override void Dispose()

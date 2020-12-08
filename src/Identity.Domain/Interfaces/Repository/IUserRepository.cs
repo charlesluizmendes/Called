@@ -8,6 +8,6 @@ namespace Identity.Domain.Interfaces.Repository
 {
     public interface IUserRepository : IBaseRepository<User>
     {
-        Task<User> GetUserAsync(User user);
+        Task<User> GetUserByLoginAsync(User user);
     }
 }

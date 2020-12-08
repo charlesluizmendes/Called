@@ -40,6 +40,18 @@ namespace Identity.Api
 
             services.Configure<AudienceConfiguration>(Configuration.GetSection("Audience"));
 
+            // Swagger
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Microservice Identity",
+                    Description = "Microservice of Identity",
+                    Version = "v1"
+                });
+            });
+
             services.AddControllers();           
         }
 
@@ -51,6 +63,15 @@ namespace Identity.Api
             }
 
             app.UseHttpsRedirection();
+
+            // Swagger
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Microservice Identity");
+            });
 
             app.UseRouting();
 

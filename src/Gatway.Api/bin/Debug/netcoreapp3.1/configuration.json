@@ -13,7 +13,7 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/api/auth",
+      "DownstreamPathTemplate": "/api/token",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -21,7 +21,7 @@
           "Port": 44360
         }
       ],
-      "UpstreamPathTemplate": "/api/auth",
+      "UpstreamPathTemplate": "/api/token",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {

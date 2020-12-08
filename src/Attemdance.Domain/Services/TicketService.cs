@@ -30,8 +30,7 @@ namespace Attemdance.Domain.Services
                 await _emailService.SendAsync("no-replay@called.com",
                     ticket.Email,
                     "Called",
-                    ticket.Complaint
-                    );
+                    ticket.Complaint);
 
                 return _ticket;
             }

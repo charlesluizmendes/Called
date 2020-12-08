@@ -21,13 +21,13 @@ namespace Identity.Domain.Services
             _tokenService = tokenService;
         }
 
-        public async Task<AcessToken> GetTokenAsync(User user)
+        public async Task<AcessToken> GetTokenByEmailAsync(User user)
         {
-            var _user = await _userRepository.GetUserAsync(user);
+            var _user = await _userRepository.GetUserByLoginAsync(user);
 
             if (_user != null)
             {
-                var token = await _tokenService.CreateTokenAsync(user);
+                var token = await _tokenService.CreateTokenByEmailAsync(user);
 
                 return token;
             }
