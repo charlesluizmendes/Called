@@ -1,4 +1,5 @@
 ﻿using Identity.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace Identity.Infrastructure.Context
 {
-    public class IdentityContext : IdentityDbContext<User>
+    public class IdentityContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public virtual DbSet<User> User { get; set; }
 

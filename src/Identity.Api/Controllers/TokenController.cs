@@ -5,6 +5,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -16,9 +18,14 @@ namespace Identity.Api.Controllers
     [ApiController]
     public class TokenController : ControllerBase
     {
-        public TokenController()
-        {
+        private readonly IMapper _mapper;
+        private readonly IMediator _mediator;
 
+        public TokenController(IMapper mapper,
+            IMediator mediator)
+        {
+            _mapper = mapper;
+            _mediator = mediator;
         }
     }
 }

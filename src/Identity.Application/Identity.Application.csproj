@@ -9,10 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\" />
     <Folder Include="Services\Command\" />
     <Folder Include="Services\Query\" />
-    <Folder Include="Validators\" />
   </ItemGroup>
 
   <ItemGroup>
