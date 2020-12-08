@@ -31,7 +31,7 @@ namespace Called.Domain.Services
 
             if (_ticket != null)
             {
-                _ticketCreateSender.SendMessage(ticket);
+                await _ticketCreateSender.SendMessageAsync(ticket);
                 await _chatHubService.SendChatAsync(ticket.Email, ticket.Complaint);
 
                 return _ticket;

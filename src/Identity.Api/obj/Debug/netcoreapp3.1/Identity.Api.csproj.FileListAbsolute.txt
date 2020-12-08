@@ -101,3 +101,12 @@ D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Microsoft.Entit
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.csproj.CoreCompileInputs.cache
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Visual Studio\Called\src\Identity.Api\obj\Debug\netcoreapp3.1\Identity.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\MediatR.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Application.dll
+D:\Visual Studio\Called\src\Identity.Api\bin\Debug\netcoreapp3.1\Identity.Application.pdb

@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using FluentValidation.AspNetCore;
+using Identity.Application.AutoMapper;
 using Identity.Infrastructure.Context;
 using Identity.Infrastructure.IoC;
 using Identity.Infrastructure.Services.Options;
@@ -36,6 +39,10 @@ namespace Identity.Api
 
             InjectorDependency.Register(services);
 
+            // AutoMapper
+
+            services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));
+
             // JWT
 
             services.Configure<AudienceConfiguration>(Configuration.GetSection("Audience"));
@@ -52,7 +59,9 @@ namespace Identity.Api
                 });
             });
 
-            services.AddControllers();           
+            // Fluent Validation
+
+            services.AddControllers().AddFluentValidation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

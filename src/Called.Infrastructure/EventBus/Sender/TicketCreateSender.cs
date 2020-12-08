@@ -7,6 +7,7 @@ using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Called.Infrastructure.EventBus.Sender
 {
@@ -25,11 +26,16 @@ namespace Called.Infrastructure.EventBus.Sender
             _password = rabbitMqOptions.Value.Password;
         }
 
-        public void SendMessage(Ticket ticket)
+        public async Task SendMessageAsync(Ticket ticket)
         {
             try
             {
-                var factory = new ConnectionFactory() { HostName = _hostname, UserName = _username, Password = _password };
+                var factory = new ConnectionFactory() 
+                { 
+                    HostName = _hostname, 
+                    UserName = _username, 
+                    Password = _password
+                };
 
                 using (var connection = factory.CreateConnection())
                 using (var channel = connection.CreateModel())
@@ -40,6 +46,8 @@ namespace Called.Infrastructure.EventBus.Sender
                     var body = Encoding.UTF8.GetBytes(json);
 
                     channel.BasicPublish(exchange: "", routingKey: _queueName, basicProperties: null, body: body);
+
+                    await Task.Yield();
                 }
             }
             catch (Exception ex)

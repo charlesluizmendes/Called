@@ -45,7 +45,8 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
             {
                 HostName = _hostname,
                 UserName = _username,
-                Password = _password
+                Password = _password,
+                DispatchConsumersAsync = true
             };
 
             try
@@ -60,10 +61,12 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
             }            
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var consumer = new EventingBasicConsumer(_channel);
-            consumer.Received += (ch, ea) =>
+            stoppingToken.ThrowIfCancellationRequested();
+
+            var consumer = new AsyncEventingBasicConsumer(_channel);
+            consumer.Received += async (ch, ea) =>
             {
                 try
                 {
@@ -71,9 +74,11 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
                     var message = Encoding.UTF8.GetString(body);
                     var ticket = JsonConvert.DeserializeObject<Ticket>(message);
 
-                    HandlerTicketMessageAsync(ticket);
+                    await HandlerTicketMessageAsync(ticket);
 
-                    _channel.BasicAck(ea.DeliveryTag, false);
+                    _channel.BasicAck(ea.DeliveryTag, false);                    
+
+                    await Task.Yield();
                 }
                 catch (Exception ex)
                 {
@@ -85,10 +90,10 @@ namespace Attemdance.Infrastructure.EventBus.Receiver
 
             _channel.BasicConsume(_queueName, false, consumer);
 
-            return Task.CompletedTask;
+            await Task.Yield();
         }
 
-        private async void HandlerTicketMessageAsync(Ticket ticket)
+        private async Task HandlerTicketMessageAsync(Ticket ticket)
         {
             await _ticketService.InsertAsync(ticket);
         }

@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Called.Domain.Interfaces.Sender.EventBus
 {
     public interface ITicketCreateSender
     {
-        void SendMessage(Ticket ticket);
+        Task SendMessageAsync(Ticket ticket);
     }
 }
