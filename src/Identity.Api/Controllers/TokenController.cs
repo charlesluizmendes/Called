@@ -6,6 +6,9 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Identity.Application.Dto;
+using Identity.Application.Services.Query;
+using Identity.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +29,22 @@ namespace Identity.Api.Controllers
         {
             _mapper = mapper;
             _mediator = mediator;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<AcessTokenDto>> Post(GetAcessTokenDto getAcessTokenDto)
+        {
+            var token = await _mediator.Send(new GetAcessTokenByLoginQuery 
+            { 
+                User = _mapper.Map<User>(getAcessTokenDto)
+            });
+
+            if (token != null)
+            {                
+                return Ok(_mapper.Map<List<AcessTokenDto>>(token));
+            }
+
+            return Unauthorized();
         }
     }
 }

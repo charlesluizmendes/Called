@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Services\Command\" />
-    <Folder Include="Services\Query\" />
   </ItemGroup>
 
   <ItemGroup>

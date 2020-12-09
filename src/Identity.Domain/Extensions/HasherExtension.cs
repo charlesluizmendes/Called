@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Identity.Domain.Extensions
 {
-    public class HasherExtension
+    public static class HasherExtension
     {
         public static string HashPassword(string password)
         {
@@ -20,12 +20,15 @@ namespace Identity.Domain.Extensions
         {
             var hasher = new PasswordHasher<User>();
 
-            var verify = hasher.VerifyHashedPassword(null, passwordHash, providedPassword);
-
-            if (verify == PasswordVerificationResult.Success)
+            if (passwordHash != null && providedPassword != null)
             {
-                return true;
-            }
+                var verify = hasher.VerifyHashedPassword(null, passwordHash, providedPassword);
+
+                if (verify == PasswordVerificationResult.Success)
+                {
+                    return true;
+                }
+            }            
 
             return false;
         }

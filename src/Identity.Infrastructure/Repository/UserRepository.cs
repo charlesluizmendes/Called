@@ -23,9 +23,11 @@ namespace Identity.Infrastructure.Repository
 
         public async Task<User> GetUserByLoginAsync(User user)
         {
-            var _user = await _context.Users.FirstOrDefaultAsync(x => x.Email.Equals(user.Email));
+            var _user = await _context.Users.FirstOrDefaultAsync(x => 
+                x.Email.Equals(user.Email));
 
-            var result = HasherExtension.VerifyHashedPassword(_user.PasswordHash, user.PasswordHash);
+            var result = HasherExtension.VerifyHashedPassword(_user?.PasswordHash, 
+                user?.PasswordHash);
 
             if (result)
             {

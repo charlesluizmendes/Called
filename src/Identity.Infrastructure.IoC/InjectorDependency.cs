@@ -1,11 +1,15 @@
-﻿using Identity.Domain.Interfaces.Repository;
+﻿using Identity.Application.Services.Query;
+using Identity.Domain.Entities;
+using Identity.Domain.Interfaces.Repository;
 using Identity.Domain.Interfaces.Services;
 using Identity.Domain.Services;
 using Identity.Infrastructure.Repository;
 using Identity.Infrastructure.Services.Services;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace Identity.Infrastructure.IoC
@@ -16,7 +20,8 @@ namespace Identity.Infrastructure.IoC
         {
             // Application
 
-            
+            container.AddMediatR(Assembly.GetExecutingAssembly());
+            container.AddTransient<IRequestHandler<GetAcessTokenByLoginQuery, AcessToken>, GetAcessTokenByLoginQueryHandler>();
 
             // Domain
 
