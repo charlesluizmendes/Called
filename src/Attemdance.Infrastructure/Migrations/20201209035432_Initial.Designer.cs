@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Attemdance.Infrastructure.Migrations
 {
     [DbContext(typeof(AttemdanceContext))]
-    [Migration("20201205025600_Initial")]
+    [Migration("20201209035432_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -41,7 +41,7 @@ namespace Identity.Api.Controllers
 
             if (token != null)
             {                
-                return Ok(_mapper.Map<List<AcessTokenDto>>(token));
+                return Ok(_mapper.Map<AcessTokenDto>(token));
             }
 
             return Unauthorized();

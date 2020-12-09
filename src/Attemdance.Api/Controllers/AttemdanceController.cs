@@ -11,5 +11,8 @@ namespace Attemdance.Api.Controllers
     [ApiController]
     public class AttemdanceController : ControllerBase
     {
+        public AttemdanceController()
+        {
+        }       
     }
 }

@@ -7,7 +7,7 @@ namespace Attemdance.Domain.Entities
 {
     public class Ticket
     {
-        [Key]
+        [Required]
         public virtual Guid Id { get; set; }
 
         [Required]

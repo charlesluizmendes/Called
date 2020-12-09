@@ -11,6 +11,13 @@ namespace Identity.Application.AutoMapper
     {
         public MappingProfile()
         {
+            CreateMap<AcessTokenDto, AcessToken>();
+            CreateMap<AcessToken, AcessTokenDto>();
+
+            CreateMap<GetAcessTokenDto, User>()
+                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => dto.Password));
+            CreateMap<User, GetAcessTokenDto>();
+
             CreateMap<UserDto, User>();
             CreateMap<User, UserDto>();
 
@@ -23,14 +30,7 @@ namespace Identity.Application.AutoMapper
             CreateMap<User, UpdateUserDto>();
 
             CreateMap<DeleteUserDto, User>();
-            CreateMap<User, DeleteUserDto>();
-
-            CreateMap<AcessTokenDto, AcessToken>();
-            CreateMap<AcessToken, AcessTokenDto>();
-
-            CreateMap<GetAcessTokenDto, User>()
-                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => dto.Password));
-            CreateMap<User, GetAcessTokenDto>();
+            CreateMap<User, DeleteUserDto>();            
         }
     }
 }
