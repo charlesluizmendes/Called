@@ -7,6 +7,7 @@ using Identity.Application.Dto;
 using Identity.Application.Services.Command;
 using Identity.Application.Services.Query;
 using Identity.Domain.Entities;
+using Identity.Domain.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -48,12 +49,7 @@ namespace Identity.Api.Controllers
 
         [HttpPost]
         public async Task<ActionResult<UserDto>> Post(CreateUserDto createUserDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(createUserDto);
-            }
-
+        {          
             var user = await _mediator.Send(new CreateUserCommand
             {
                 User = _mapper.Map<User>(createUserDto)
@@ -68,14 +64,21 @@ namespace Identity.Api.Controllers
             if (id != updateUserDto.Id)
             {
                 return BadRequest();
-            }            
+            }
 
-            var user = await _mediator.Send(new UpdateUserCommand
+            var user = await _mediator.Send(new GetUserByIdQuery
             {
-                User = _mapper.Map<User>(updateUserDto)
+                Id = id
             });
 
-            return Ok(_mapper.Map<UserDto>(user));
+
+
+            var _user = await _mediator.Send(new UpdateUserCommand
+            {
+                User = user
+            });
+
+            return Ok(_mapper.Map<UserDto>(_user));
         }
 
         [HttpDelete("{id}")]

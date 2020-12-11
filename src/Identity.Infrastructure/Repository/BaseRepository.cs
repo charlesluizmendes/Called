@@ -59,7 +59,7 @@ namespace Identity.Infrastructure.Repository
         public virtual async Task<T> UpdateAsync(T entity)
         {
             try
-            {
+            {              
                 _context.Entry(entity).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
 

@@ -2,6 +2,7 @@
 using Identity.Domain.Extensions;
 using Identity.Domain.Interfaces.Repository;
 using Identity.Infrastructure.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using Identity.Application.AutoMapper;
+using Identity.Domain.Entities;
 using Identity.Infrastructure.Context;
 using Identity.Infrastructure.IoC;
 using Identity.Infrastructure.Services.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +36,11 @@ namespace Identity.Api
             services.AddDbContext<IdentityContext>(option =>
                  option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
+
+            // Identity
+
+            services.AddIdentity<User, IdentityRole<Guid>>()
+                .AddEntityFrameworkStores<IdentityContext>();
 
             // IoC
 
@@ -61,7 +68,7 @@ namespace Identity.Api
 
             // Fluent Validation
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -15,6 +15,9 @@ using Called.Infrastructure.EventBus.Sender;
 using Called.Domain.Interfaces.Sender.EventBus;
 using Called.Infrastructure.Services.Hubs;
 using Microsoft.AspNetCore.SignalR;
+using FluentValidation;
+using Called.Application.Dto;
+using Called.Application.Validators;
 
 namespace Called.Infrastructure.IoC
 {
@@ -42,6 +45,10 @@ namespace Called.Infrastructure.IoC
             container.AddTransient<ITicketCreateSender, TicketCreateSender>();
 
             container.AddTransient<IHubService, HubService>();
+
+            // Validator
+
+            container.AddTransient<IValidator<CreateTicketDto>, CreateTicketValidator>();
         }
     }
 }

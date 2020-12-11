@@ -1,5 +1,8 @@
-﻿using Identity.Application.Services.Command;
+﻿using FluentValidation;
+using Identity.Application.Dto;
+using Identity.Application.Services.Command;
 using Identity.Application.Services.Query;
+using Identity.Application.Validators;
 using Identity.Domain.Entities;
 using Identity.Domain.Interfaces.Repository;
 using Identity.Domain.Interfaces.Services;
@@ -40,6 +43,12 @@ namespace Identity.Infrastructure.IoC
             container.AddTransient<IUserRepository, UserRepository>();
 
             container.AddTransient<ITokenService, TokenService>();
+
+            // Validator
+
+            container.AddTransient<IValidator<GetAcessTokenDto>, GetAcessTokenValidator>();
+            container.AddTransient<IValidator<UpdateUserDto>, UpdateUserValidator>();
+            container.AddTransient<IValidator<CreateUserDto>, CreateUserValidator>();           
         }
     }
 }
