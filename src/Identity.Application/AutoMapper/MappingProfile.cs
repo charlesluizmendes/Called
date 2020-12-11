@@ -25,11 +25,7 @@ namespace Identity.Application.AutoMapper
 
             CreateMap<CreateUserDto, User>()
                 .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => HasherExtension.HashPassword(dto.Password)));
-            CreateMap<User, CreateUserDto>();               
-
-            CreateMap<UpdateUserDto, User>()
-                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => HasherExtension.HashPassword(dto.Password)));
-            CreateMap<User, UpdateUserDto>();                                
+            CreateMap<User, CreateUserDto>();              
         }
     }
 }

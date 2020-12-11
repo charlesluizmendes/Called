@@ -71,7 +71,8 @@ namespace Identity.Api.Controllers
                 Id = id
             });
 
-
+            user.Email = updateUserDto.Email;
+            user.PasswordHash = HasherExtension.HashPassword(updateUserDto.Password);
 
             var _user = await _mediator.Send(new UpdateUserCommand
             {
@@ -84,7 +85,7 @@ namespace Identity.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<UserDto>> Delete(Guid id)
         {
-            if (id == null)
+            if (id == Guid.Empty)
             {
                 return BadRequest();
             }
