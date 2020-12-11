@@ -1,4 +1,5 @@
-﻿using Identity.Application.Services.Query;
+﻿using Identity.Application.Services.Command;
+using Identity.Application.Services.Query;
 using Identity.Domain.Entities;
 using Identity.Domain.Interfaces.Repository;
 using Identity.Domain.Interfaces.Services;
@@ -22,6 +23,11 @@ namespace Identity.Infrastructure.IoC
 
             container.AddMediatR(Assembly.GetExecutingAssembly());
             container.AddTransient<IRequestHandler<GetAcessTokenByLoginQuery, AcessToken>, GetAcessTokenByLoginQueryHandler>();
+            container.AddTransient<IRequestHandler<GetUserQuery, IEnumerable<User>>, GetUserQueryHandler>();
+            container.AddTransient<IRequestHandler<GetUserByIdQuery, User>, GetUserByIdQueryHandler>();
+            container.AddTransient<IRequestHandler<CreateUserCommand, User>, CreateUserCommandHandler>();
+            container.AddTransient<IRequestHandler<UpdateUserCommand, User>, UpdateUserCommandHandler>();
+            container.AddTransient<IRequestHandler<DeleteUserCommand, User>, DeleteUserCommandHandler>();
 
             // Domain
 

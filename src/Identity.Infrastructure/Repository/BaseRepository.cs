@@ -60,7 +60,7 @@ namespace Identity.Infrastructure.Repository
         {
             try
             {
-                _context.Update(entity);
+                _context.Entry(entity).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
 
                 return entity;

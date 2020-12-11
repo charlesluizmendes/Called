@@ -61,7 +61,7 @@ namespace Identity.Api
 
             // Fluent Validation
 
-            services.AddControllers().AddFluentValidation();
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

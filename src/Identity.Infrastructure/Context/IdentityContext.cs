@@ -9,9 +9,10 @@ using System.Text;
 
 namespace Identity.Infrastructure.Context
 {
-    public class IdentityContext : IdentityDbContext<User>
+    public class IdentityContext : IdentityDbContext<User, Role, Guid>
     {
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
 
         public IdentityContext(DbContextOptions<IdentityContext> options)
             : base(options)
@@ -20,14 +21,7 @@ namespace Identity.Infrastructure.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
-
-            builder.Entity<User>().HasData(
-                new User
-                {
-                    Email = "charlesluizmendes@gmail.com",
-                    PasswordHash = HasherExtension.HashPassword("123"),
-                });
+            base.OnModelCreating(builder);            
         }
     }
 }
