@@ -31,13 +31,15 @@ namespace Identity.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<UserDto>> Get()
         {
-            var users = await _mediator.Send(new GetUserQuery() { });
+            var users = await _mediator.Send(new GetUserQuery()
+            {
+            });
 
             return Ok(_mapper.Map<List<UserDto>>(users));
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDto>> Get(Guid id)
+        public async Task<ActionResult<UserDto>> Get(string id)
         {
             var user = await _mediator.Send(new GetUserByIdQuery
             {
@@ -49,7 +51,7 @@ namespace Identity.Api.Controllers
 
         [HttpPost]
         public async Task<ActionResult<UserDto>> Post(CreateUserDto createUserDto)
-        {          
+        {
             var user = await _mediator.Send(new CreateUserCommand
             {
                 User = _mapper.Map<User>(createUserDto)
@@ -58,38 +60,25 @@ namespace Identity.Api.Controllers
             return Ok(_mapper.Map<UserDto>(user));
         }
 
-        [HttpPut("{id}")]
-        public async Task<ActionResult<UserDto>> Put(Guid id, UpdateUserDto updateUserDto)
+        [HttpPut]
+        public async Task<ActionResult<UserDto>> Put(UpdateUserDto updateUserDto)
         {
-            if (id != updateUserDto.Id)
-            {
-                return BadRequest();
-            }
-
-            var user = await _mediator.Send(new GetUserByIdQuery
-            {
-                Id = id
-            });
-
-            user.Email = updateUserDto.Email;
-            user.PasswordHash = HasherExtension.HashPassword(updateUserDto.Password);
-
             var _user = await _mediator.Send(new UpdateUserCommand
             {
-                User = user
+                User = _mapper.Map<User>(updateUserDto)
             });
 
             return Ok(_mapper.Map<UserDto>(_user));
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<UserDto>> Delete(Guid id)
+        public async Task<ActionResult<UserDto>> Delete(string id)
         {
-            if (id == Guid.Empty)
+            if (string.IsNullOrEmpty(id))
             {
                 return BadRequest();
             }
-                       
+
             var user = await _mediator.Send(new GetUserByIdQuery
             {
                 Id = id

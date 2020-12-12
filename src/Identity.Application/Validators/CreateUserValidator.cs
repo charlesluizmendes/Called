@@ -10,6 +10,12 @@ namespace Identity.Application.Validators
     {
         public CreateUserValidator()
         {
+            RuleFor(x => x.Name)
+                .NotEmpty().NotNull()
+                .WithMessage("O Nome não pode ser nulo")
+                .Matches(@"^[ a-zA-ZÀ-ú]*$")
+                .WithMessage("O Nome deve possuir somente letras");
+
             RuleFor(x => x.Email)
                 .NotEmpty().NotNull()
                 .WithMessage("O Email não pode ser nulo")

@@ -12,30 +12,153 @@ using System.Threading.Tasks;
 
 namespace Identity.Infrastructure.Repository
 {
-    public class UserRepository : BaseRepository<User>, IUserRepository
+    public class UserRepository : IUserRepository, IDisposable
     {
-        private readonly IdentityContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public UserRepository(IdentityContext context)
-            : base(context)
+        public UserRepository(UserManager<User> userManager)
         {
-            _context = context;
+            _userManager = userManager;
+        }
+
+        public async Task<IEnumerable<User>> GetUsersAsync()
+        {
+            try
+            {
+                return await _userManager.Users.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<User> GetUserByIdAsync(string id)
+        {
+            try
+            {
+                return await _userManager.FindByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<User> InsertUserAsync(User user)
+        {
+            try
+            {
+                var result = await _userManager.CreateAsync(user, user.PasswordHash);
+
+                if (result.Succeeded)
+                {
+                    return user;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<User> UpdateUserAsync(User user)
+        {
+            try
+            {
+                var _user = await _userManager.FindByIdAsync(user.Id);               
+
+                if (_user != null)
+                {
+                    _user.UserName = user.UserName;
+                    _user.Email = user.Email;
+                    _user.PasswordHash = user.PasswordHash;
+
+                    var result = await _userManager.UpdateAsync(_user);
+
+                    if (result.Succeeded)
+                    {
+                        return user;
+                    }
+
+                    return null;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<User> DeleteUserAsync(User user)
+        {
+            try
+            {
+                var result = await _userManager.DeleteAsync(user);
+
+                if (result.Succeeded)
+                {
+                    return user;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public async Task<User> GetUserByLoginAsync(User user)
         {
-            var _user = await _context.Users.FirstOrDefaultAsync(x => 
-                x.Email.Equals(user.Email));
-
-            var result = HasherExtension.VerifyHashedPassword(_user?.PasswordHash, 
-                user?.PasswordHash);
-
-            if (result)
+            try
             {
-                return _user;
+                var _user = await _userManager.Users.FirstOrDefaultAsync(x =>
+                    x.Email.Equals(user.Email));
+
+                var result = HasherExtension.VerifyHashedPassword(_user?.PasswordHash,
+                    user?.PasswordHash);
+
+                if (result)
+                {
+                    return _user;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #region Dispose
+
+        private bool disposed = false;
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    _userManager.Dispose();
+                }
             }
 
-            return null;
+            this.disposed = true;
         }
+
+        #endregion
     }
 }

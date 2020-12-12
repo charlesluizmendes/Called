@@ -34,14 +34,11 @@ namespace Identity.Infrastructure.IoC
 
             // Domain
 
-            container.AddTransient(typeof(IBaseService<>), typeof(BaseService<>));
             container.AddTransient<IUserService, UserService>();
 
             // Infrastructure            
 
-            container.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             container.AddTransient<IUserRepository, UserRepository>();
-
             container.AddTransient<ITokenService, TokenService>();
 
             // Validator

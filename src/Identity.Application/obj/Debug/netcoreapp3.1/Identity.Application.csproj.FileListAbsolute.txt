@@ -10,3 +10,5 @@ D:\Visual Studio\Called\src\Identity.Application\bin\Debug\netcoreapp3.1\Identit
 D:\Visual Studio\Called\src\Identity.Application\obj\Debug\netcoreapp3.1\Identity.Application.csproj.CoreCompileInputs.cache
 D:\Visual Studio\Called\src\Identity.Application\obj\Debug\netcoreapp3.1\Identity.Application.dll
 D:\Visual Studio\Called\src\Identity.Application\obj\Debug\netcoreapp3.1\Identity.Application.pdb
+D:\Visual Studio\Called\src\Identity.Application\bin\Debug\netcoreapp3.1\Identity.Infrastructure.dll
+D:\Visual Studio\Called\src\Identity.Application\bin\Debug\netcoreapp3.1\Identity.Infrastructure.pdb

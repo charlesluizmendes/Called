@@ -20,7 +20,7 @@ namespace Identity.Application.Services.Command
 
         public async Task<User> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            return await _userService.InsertAsync(request.User);
+            return await _userService.InsertUserAsync(request.User);
         }
     }
 }

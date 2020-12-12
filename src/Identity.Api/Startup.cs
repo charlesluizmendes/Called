@@ -39,7 +39,7 @@ namespace Identity.Api
 
             // Identity
 
-            services.AddIdentity<User, IdentityRole<Guid>>()
+            services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityContext>();
 
             // IoC

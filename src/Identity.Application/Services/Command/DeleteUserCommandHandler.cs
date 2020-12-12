@@ -20,7 +20,7 @@ namespace Identity.Application.Services.Command
 
         public async Task<User> Handle(DeleteUserCommand request, CancellationToken cancellationToken)
         {
-            return await _userService.DeleteAsync(request.User);
+            return await _userService.DeleteUserAsync(request.User);
         }
     }
 }

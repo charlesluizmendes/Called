@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Identity.Infrastructure.Context
 {
-    public class IdentityContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
+    public class IdentityContext : IdentityDbContext
     {
         public virtual DbSet<User> User { get; set; }
 

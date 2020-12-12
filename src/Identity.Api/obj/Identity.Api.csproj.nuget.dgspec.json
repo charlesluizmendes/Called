@@ -138,6 +138,9 @@
             "projectReferences": {
               "D:\\Visual Studio\\Called\\src\\Identity.Domain\\Identity.Domain.csproj": {
                 "projectPath": "D:\\Visual Studio\\Called\\src\\Identity.Domain\\Identity.Domain.csproj"
+              },
+              "D:\\Visual Studio\\Called\\src\\Identity.Infrastructure\\Identity.Infrastructure.csproj": {
+                "projectPath": "D:\\Visual Studio\\Called\\src\\Identity.Infrastructure\\Identity.Infrastructure.csproj"
               }
             }
           }

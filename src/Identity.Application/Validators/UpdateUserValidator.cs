@@ -14,6 +14,12 @@ namespace Identity.Application.Validators
                 .NotEmpty().NotNull()
                 .WithMessage("O Id não pode ser nulo");
 
+            RuleFor(x => x.Name)
+                .NotEmpty().NotNull()
+                .WithMessage("O Nome não pode ser nulo")
+                .Matches(@"^[ a-zA-ZÀ-ú]*$")
+                .WithMessage("O Nome deve possuir somente letras");
+
             RuleFor(x => x.Email)
                .NotEmpty().NotNull()
                .WithMessage("O Email não pode ser nulo")

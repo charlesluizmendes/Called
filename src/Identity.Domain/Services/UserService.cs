@@ -8,17 +8,41 @@ using System.Threading.Tasks;
 
 namespace Identity.Domain.Services
 {
-    public class UserService : BaseService<User>, IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
         private readonly ITokenService _tokenService;
 
         public UserService(IUserRepository userRepository,
             ITokenService tokenService)
-            : base(userRepository)
         {
             _userRepository = userRepository;
             _tokenService = tokenService;
+        }
+
+        public async Task<IEnumerable<User>> GetUsersAsync()
+        {
+            return await _userRepository.GetUsersAsync();
+        }
+
+        public async Task<User> GetUserByIdAsync(string id)
+        {
+            return await _userRepository.GetUserByIdAsync(id);
+        }        
+
+        public async Task<User> InsertUserAsync(User user)
+        {
+            return await _userRepository.InsertUserAsync(user);
+        }
+
+        public async Task<User> UpdateUserAsync(User user)
+        {
+            return await _userRepository.UpdateUserAsync(user);
+        }
+
+        public async Task<User> DeleteUserAsync(User user)
+        {
+            return await _userRepository.DeleteUserAsync(user);
         }
 
         public async Task<AcessToken> GetTokenByEmailAsync(User user)
@@ -33,6 +57,11 @@ namespace Identity.Domain.Services
             }
 
             return null;
+        }
+
+        public void Dispose()
+        {
+            _userRepository.Dispose();
         }
     }
 }

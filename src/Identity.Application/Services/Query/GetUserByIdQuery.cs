@@ -8,6 +8,6 @@ namespace Identity.Application.Services.Query
 {
     public class GetUserByIdQuery : IRequest<User>
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
     }
 }

@@ -21,11 +21,20 @@ namespace Identity.Application.AutoMapper
                 .ForMember(dto => dto.Password, opt => opt.MapFrom(entity => entity.PasswordHash));
 
             CreateMap<UserDto, User>();
-            CreateMap<User, UserDto>();
+            CreateMap<User, UserDto>()
+                .ForMember(dto => dto.Name, opt => opt.MapFrom(entity => entity.UserName));
 
             CreateMap<CreateUserDto, User>()
+                .ForMember(entity => entity.UserName, opt => opt.MapFrom(dto => dto.Name))
                 .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => HasherExtension.HashPassword(dto.Password)));
-            CreateMap<User, CreateUserDto>();              
+            CreateMap<User, CreateUserDto>()
+                .ForMember(dto => dto.Name, opt => opt.MapFrom(entity => entity.UserName));
+
+            CreateMap<UpdateUserDto, User>()
+                .ForMember(entity => entity.UserName, opt => opt.MapFrom(dto => dto.Name))
+                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => HasherExtension.HashPassword(dto.Password)));
+            CreateMap<User, UpdateUserDto>()
+                .ForMember(dto => dto.Name, opt => opt.MapFrom(entity => entity.UserName));
         }
     }
 }

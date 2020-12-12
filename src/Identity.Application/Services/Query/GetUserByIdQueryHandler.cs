@@ -20,7 +20,7 @@ namespace Identity.Application.Services.Query
 
         public async Task<User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            return await _userService.GetByIdAsync(request.Id);
+            return await _userService.GetUserByIdAsync(request.Id);
         }
     }
 }
