@@ -26,13 +26,13 @@ namespace Identity.Application.AutoMapper
 
             CreateMap<CreateUserDto, User>()
                 .ForMember(entity => entity.UserName, opt => opt.MapFrom(dto => dto.Name))
-                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => HasherExtension.HashPassword(dto.Password)));
+                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => dto.Password));
             CreateMap<User, CreateUserDto>()
                 .ForMember(dto => dto.Name, opt => opt.MapFrom(entity => entity.UserName));
 
             CreateMap<UpdateUserDto, User>()
                 .ForMember(entity => entity.UserName, opt => opt.MapFrom(dto => dto.Name))
-                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => HasherExtension.HashPassword(dto.Password)));
+                .ForMember(entity => entity.PasswordHash, opt => opt.MapFrom(dto => dto.Password));
             CreateMap<User, UpdateUserDto>()
                 .ForMember(dto => dto.Name, opt => opt.MapFrom(entity => entity.UserName));
         }

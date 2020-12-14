@@ -8,21 +8,22 @@ namespace Identity.Domain.Extensions
 {
     public static class HasherExtension
     {
-        public static string HashPassword(string password)
+        public static string HashPassword(User user, string password)
         {
             var hasher = new PasswordHasher<User>();
-            var hashPassword = hasher.HashPassword(null, password);
+
+            var hashPassword = hasher.HashPassword(user, password);
 
             return hashPassword;
         }
 
-        public static bool VerifyHashedPassword(string passwordHash, string providedPassword)
+        public static bool VerifyHashedPassword(User user, string passwordHash, string providedPassword)
         {
             var hasher = new PasswordHasher<User>();
 
             if (passwordHash != null && providedPassword != null)
             {
-                var verify = hasher.VerifyHashedPassword(null, passwordHash, providedPassword);
+                var verify = hasher.VerifyHashedPassword(user, passwordHash, providedPassword);
 
                 if (verify == PasswordVerificationResult.Success)
                 {

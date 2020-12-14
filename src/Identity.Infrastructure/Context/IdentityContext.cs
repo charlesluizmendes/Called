@@ -9,10 +9,8 @@ using System.Text;
 
 namespace Identity.Infrastructure.Context
 {
-    public class IdentityContext : IdentityDbContext
+    public class IdentityContext : IdentityDbContext<User>
     {
-        public virtual DbSet<User> User { get; set; }
-
         public IdentityContext(DbContextOptions<IdentityContext> options)
             : base(options)
         {

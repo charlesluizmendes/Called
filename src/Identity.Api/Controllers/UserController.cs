@@ -41,6 +41,11 @@ namespace Identity.Api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<UserDto>> Get(string id)
         {
+            if (string.IsNullOrEmpty(id))
+            {
+                return BadRequest();
+            }
+
             var user = await _mediator.Send(new GetUserByIdQuery
             {
                 Id = id
@@ -77,16 +82,11 @@ namespace Identity.Api.Controllers
             if (string.IsNullOrEmpty(id))
             {
                 return BadRequest();
-            }
-
-            var user = await _mediator.Send(new GetUserByIdQuery
-            {
-                Id = id
-            });
+            }           
 
             var _user = await _mediator.Send(new DeleteUserCommand
             {
-                User = user
+                Id = id
             });
 
             return Ok(_mapper.Map<UserDto>(_user));

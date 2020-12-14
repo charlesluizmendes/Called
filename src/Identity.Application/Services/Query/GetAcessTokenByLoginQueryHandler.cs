@@ -20,7 +20,7 @@ namespace Identity.Application.Services.Query
 
         public async Task<AcessToken> Handle(GetAcessTokenByLoginQuery request, CancellationToken cancellationToken)
         {
-            return await _userService.GetTokenByEmailAsync(request.User);
+            return await _userService.GetAcessTokenByLoginAsync(request.User);
         }
     }
 }

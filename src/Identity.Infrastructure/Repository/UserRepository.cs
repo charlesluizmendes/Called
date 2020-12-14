@@ -94,16 +94,21 @@ namespace Identity.Infrastructure.Repository
             }
         }
 
-        public async Task<User> DeleteUserAsync(User user)
+        public async Task<User> DeleteUserAsync(string id)
         {
             try
             {
-                var result = await _userManager.DeleteAsync(user);
+                var user = await _userManager.FindByIdAsync(id);
 
-                if (result.Succeeded)
+                if (user != null)
                 {
-                    return user;
-                }
+                    var result = await _userManager.DeleteAsync(user);
+
+                    if (result.Succeeded)
+                    {
+                        return user;
+                    }
+                }                
 
                 return null;
             }
@@ -113,22 +118,12 @@ namespace Identity.Infrastructure.Repository
             }
         }
 
-        public async Task<User> GetUserByLoginAsync(User user)
+        public async Task<User> GetUserByEmailAsync(User user)
         {
             try
             {
-                var _user = await _userManager.Users.FirstOrDefaultAsync(x =>
-                    x.Email.Equals(user.Email));
-
-                var result = HasherExtension.VerifyHashedPassword(_user?.PasswordHash,
-                    user?.PasswordHash);
-
-                if (result)
-                {
-                    return _user;
-                }
-
-                return null;
+               return await _userManager.Users.FirstOrDefaultAsync(x =>
+                    x.Email.Equals(user.Email));                
             }
             catch (Exception ex)
             {

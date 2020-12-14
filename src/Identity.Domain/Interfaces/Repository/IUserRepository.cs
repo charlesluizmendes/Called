@@ -16,9 +16,9 @@ namespace Identity.Domain.Interfaces.Repository
 
         Task<User> UpdateUserAsync(User user);
 
-        Task<User> DeleteUserAsync(User user);
+        Task<User> DeleteUserAsync(string id);
 
-        Task<User> GetUserByLoginAsync(User user);
+        Task<User> GetUserByEmailAsync(User user);
 
         void Dispose();
     }

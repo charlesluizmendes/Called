@@ -8,6 +8,6 @@ namespace Identity.Application.Services.Command
 {
     public class DeleteUserCommand : IRequest<User>
     {
-        public User User { get; set; }
+        public string Id { get; set; }
     }
 }

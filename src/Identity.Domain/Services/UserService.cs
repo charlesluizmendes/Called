@@ -1,4 +1,5 @@
 ﻿using Identity.Domain.Entities;
+using Identity.Domain.Extensions;
 using Identity.Domain.Interfaces.Repository;
 using Identity.Domain.Interfaces.Services;
 using System;
@@ -32,28 +33,38 @@ namespace Identity.Domain.Services
 
         public async Task<User> InsertUserAsync(User user)
         {
+            user.PasswordHash = HasherExtension.HashPassword(user, 
+                user.PasswordHash);
+
             return await _userRepository.InsertUserAsync(user);
         }
 
         public async Task<User> UpdateUserAsync(User user)
         {
+            user.PasswordHash = HasherExtension.HashPassword(user, 
+                user.PasswordHash);
+
             return await _userRepository.UpdateUserAsync(user);
         }
 
-        public async Task<User> DeleteUserAsync(User user)
+        public async Task<User> DeleteUserAsync(string id)
         {
-            return await _userRepository.DeleteUserAsync(user);
+            return await _userRepository.DeleteUserAsync(id);
         }
 
-        public async Task<AcessToken> GetTokenByEmailAsync(User user)
+        public async Task<AcessToken> GetAcessTokenByLoginAsync(User user)
         {
-            var _user = await _userRepository.GetUserByLoginAsync(user);
+            var _user = await _userRepository.GetUserByEmailAsync(user);
 
             if (_user != null)
             {
-                var token = await _tokenService.CreateTokenByEmailAsync(user);
+                var result = HasherExtension.VerifyHashedPassword(_user,
+                    _user.PasswordHash, user.PasswordHash);
 
-                return token;
+                if (result)
+                {
+                    return await _tokenService.CreateTokenByEmailAsync(_user);
+                }
             }
 
             return null;

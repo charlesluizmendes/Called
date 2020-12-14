@@ -16,8 +16,8 @@ namespace Identity.Domain.Interfaces.Services
 
         Task<User> UpdateUserAsync(User user);
 
-        Task<User> DeleteUserAsync(User user);
+        Task<User> DeleteUserAsync(string id);
 
-        Task<AcessToken> GetTokenByEmailAsync(User user);
+        Task<AcessToken> GetAcessTokenByLoginAsync(User user);
     }
 }
