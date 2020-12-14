@@ -1,5 +1,5 @@
 ﻿using Identity.Domain.Entities;
-using Identity.Domain.Interfaces.Services;
+using Identity.Domain.Interfaces.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,16 +11,16 @@ namespace Identity.Application.Services.Command
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, User>
     {
-        private readonly IUserService _userService;
+        private readonly IUserRepository _userRepository;
 
-        public CreateUserCommandHandler(IUserService userService)
+        public CreateUserCommandHandler(IUserRepository userRepository)
         {
-            _userService = userService;
+            _userRepository = userRepository;
         }
 
         public async Task<User> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            return await _userService.InsertUserAsync(request.User);
+            return await _userRepository.InsertUserAsync(request.User);
         }
     }
 }

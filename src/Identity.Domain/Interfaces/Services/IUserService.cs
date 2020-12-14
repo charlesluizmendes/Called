@@ -7,17 +7,7 @@ using System.Threading.Tasks;
 namespace Identity.Domain.Interfaces.Services
 {
     public interface IUserService
-    {
-        Task<IEnumerable<User>> GetUsersAsync();
-
-        Task<User> GetUserByIdAsync(string id);
-
-        Task<User> InsertUserAsync(User user);
-
-        Task<User> UpdateUserAsync(User user);
-
-        Task<User> DeleteUserAsync(string id);
-
+    {       
         Task<AcessToken> GetAcessTokenByLoginAsync(User user);
     }
 }

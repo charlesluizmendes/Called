@@ -1,5 +1,5 @@
 ﻿using Identity.Domain.Entities;
-using Identity.Domain.Interfaces.Services;
+using Identity.Domain.Interfaces.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,16 +11,16 @@ namespace Identity.Application.Services.Query
 {
     public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, User>
     {
-        private readonly IUserService _userService;
+        private readonly IUserRepository _userRepository;
 
-        public GetUserByIdQueryHandler(IUserService userService)
+        public GetUserByIdQueryHandler(IUserRepository userRepository)
         {
-            _userService = userService;
+            _userRepository = userRepository;
         }
 
         public async Task<User> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
-            return await _userService.GetUserByIdAsync(request.Id);
+            return await _userRepository.GetUserByIdAsync(request.Id);
         }
     }
 }

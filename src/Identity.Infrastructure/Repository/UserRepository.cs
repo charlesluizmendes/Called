@@ -49,7 +49,8 @@ namespace Identity.Infrastructure.Repository
         {
             try
             {
-                var result = await _userManager.CreateAsync(user, user.PasswordHash);
+                var result = await _userManager.CreateAsync(user, 
+                    user.PasswordHash);
 
                 if (result.Succeeded)
                 {

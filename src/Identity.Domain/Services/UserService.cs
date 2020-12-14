@@ -20,32 +20,7 @@ namespace Identity.Domain.Services
             _userRepository = userRepository;
             _tokenService = tokenService;
         }
-
-        public async Task<IEnumerable<User>> GetUsersAsync()
-        {
-            return await _userRepository.GetUsersAsync();
-        }
-
-        public async Task<User> GetUserByIdAsync(string id)
-        {
-            return await _userRepository.GetUserByIdAsync(id);
-        }        
-
-        public async Task<User> InsertUserAsync(User user)
-        {         
-            return await _userRepository.InsertUserAsync(user);
-        }
-
-        public async Task<User> UpdateUserAsync(User user)
-        {            
-            return await _userRepository.UpdateUserAsync(user);
-        }
-
-        public async Task<User> DeleteUserAsync(string id)
-        {
-            return await _userRepository.DeleteUserAsync(id);
-        }
-
+        
         public async Task<AcessToken> GetAcessTokenByLoginAsync(User user)
         {
             var _user = await _userRepository.GetUserByEmailAsync(user);
@@ -62,11 +37,6 @@ namespace Identity.Domain.Services
             }
 
             return null;
-        }
-
-        public void Dispose()
-        {
-            _userRepository.Dispose();
-        }
+        }       
     }
 }
