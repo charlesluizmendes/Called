@@ -8,15 +8,6 @@ namespace Identity.Domain.Extensions
 {
     public static class HasherExtension
     {
-        public static string HashPassword(User user, string password)
-        {
-            var hasher = new PasswordHasher<User>();
-
-            var hashPassword = hasher.HashPassword(user, password);
-
-            return hashPassword;
-        }
-
         public static bool VerifyHashedPassword(User user, string passwordHash, string providedPassword)
         {
             var hasher = new PasswordHasher<User>();

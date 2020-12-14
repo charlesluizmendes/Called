@@ -39,8 +39,15 @@ namespace Identity.Api
 
             // Identity
 
-            services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<IdentityContext>();
+            services.AddIdentity<User, IdentityRole>(options => 
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+            })
+            .AddEntityFrameworkStores<IdentityContext>();
 
             // IoC
 

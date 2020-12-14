@@ -32,18 +32,12 @@ namespace Identity.Domain.Services
         }        
 
         public async Task<User> InsertUserAsync(User user)
-        {
-            user.PasswordHash = HasherExtension.HashPassword(user, 
-                user.PasswordHash);
-
+        {         
             return await _userRepository.InsertUserAsync(user);
         }
 
         public async Task<User> UpdateUserAsync(User user)
-        {
-            user.PasswordHash = HasherExtension.HashPassword(user, 
-                user.PasswordHash);
-
+        {            
             return await _userRepository.UpdateUserAsync(user);
         }
 
