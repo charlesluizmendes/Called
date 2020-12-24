@@ -1,15 +1,14 @@
 # Called
 Sistema de Chamados em arquitetura de Microserviços.
 
-## Ambiente
 
+## Ambiente
 
 ### Banco de Dados
 Para a criação do banco de dados e tabelas, entre no Gerenciador de Pacotes Nuget e selecione o projeto "Infrastructure" de cada Microserviço e execute o seguinte comando:
 ```
 PM> Update-Database
 ```
-
 
 ### Mensageria
 Acesse o link abaixo para acessar a pagina web docker hub do RabbitMQ:
@@ -25,12 +24,13 @@ Após a execução do comando acima, basta inicializar o RabbitMQ, o serviço de
 CMD> docker run -d --hostname rabbitserver --name rabbitmq-server -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 ```
 
-
 ### Projeto
 Toda a aplicação foi desenvolvida em Core 3.1, após a execução do comando acima basta ir nas propriedades da solução e selecionar a inicialização de todos os projetos "API".
 
 
 ## Requisições
+
+### User
 Toda requisição HTTP dos microserviços e feita através da API.Gatway, que foi contruida utilizando o pacote Ocelot. Para a utlização do endpoints da soluçao, utilize as seguintes requisições:
 
 #### GET User
@@ -75,6 +75,9 @@ Os endpoints do microserviço Called necessitam de um JWT Token para completar a
   "Password": "123"
 }
 ```
+
+### Called
+Para utilizar os serviços de chamados basta realizar as requisições abaixo:
 
 #### GET Called
 * http://localhost:5000/called
