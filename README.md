@@ -1,6 +1,15 @@
 # Called
 Sistema de Chamados em arquitetura de Microserviços.
 
+## Arquitetura
+
+![Schema](https://user-images.githubusercontent.com/13435489/105040267-64c57100-5a40-11eb-9203-e99567b6340e.png)
+
+
+## Camadas
+
+![Layers](https://user-images.githubusercontent.com/13435489/105040085-2f208800-5a40-11eb-954f-7c162d8ee20b.png)
+
 
 ## Ambiente
 
